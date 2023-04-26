@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Monserrat', sans-serif;
+    overflow-x: hidden;
+    scroll-padding-top: 4rem;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* home section start*/
+
+#home {
+    background-image: url(../images/transparent/bwhome.png);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+#home::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    opacity: .7;
+    z-index: -1;
+}
+
+#home .home {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 5rem;
+    justify-content: flex-start;
+}
+
+#home h1{
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: #fff;
+    text-transform: uppercase;
+    animation: text_reveal .8s ease forwards;
+    animation-delay: 1s;
+}
+
+#home h1:nth-child(1) {
+    animation-delay: 1s;
+}
+
+#home h1:nth-child(2) {
+    animation-delay: 2s;
+}
+
+#home h1:nth-child(3) {
+    animation-delay: 3s;
+}
+
+#home h1:nth-child(4) {
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 4s;
+}
+
+
+
+#home .btn{
+    display: inline-block;
+    padding: 1rem 3rem;
+    color: #3030a8d6;
+    background-color: transparent;
+    border: 0.1rem solid #3030a8d6;
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: .1rem;
+    margin-top: 3.6rem;
+    transition: .3s ease background-color;
+    transition-property: background-color, color;
+}
+
+#home .btn:hover{
+    color: #fff;
+    background-color: #3030a8d6;
+}
+
+
+#home h1:nth-child(1) span{
+    animation-delay: .5s;
+}
+
+
+#home h1:nth-child(2) span{
+    animation-delay: 1.5s;
+}
+
+
+#home h1:nth-child(3) span{
+    animation-delay: 2.5s;
+}
+
+
+#home h1:nth-child(4) span{
+    animation-delay: 3.5s;
+}
+
+#home h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #3030a893;
+    animation: text_reveal_box 0.9s ease;
+    animation-delay: 0.6s;
+}
+
+/* secvice section start*/
+#serrvices{
+
+}
+
+#services .services {
+    flex-direction: column;
+    text-align: center;
+    max-width: 15rem;
+    margin: 0 auto;
+    padding: 10rem 0;
+}
+
+#services .section-title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: #000;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+#services .section-title span{
+    color: #3030a893;
+}
+
+#services .service-top p {
+    font-size: 1.5rem;
+    margin-top: .5rem;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+
+#services .service-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#services .service-itempeeling {
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem;
+    border-radius: 1rem;
+    background-image: url(../images/servicefacepeeling.jpg);
+    background-size: cover;
+    margin: 1rem 0.5rem;
+}
+
+#services .service-itempeeling::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#services .service-itemnail {
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem;
+    border-radius: 1rem;
+    background-image: url(../images/servicenail.jpg);
+    background-size: cover;
+    margin: 1rem 0.5rem;
+}
+
+#services .service-itemnail::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#services .service-itemmakeup {
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem;
+    border-radius: 1rem;
+    background-image: url(../images/servicemakeup.jpg);
+    background-size: cover;
+    margin: 1rem 0.5rem;
+}
+
+#services .service-itemmakeyp::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* secvice section end*/
+
+/* keyframes start */
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes text_reveal{
+    100%{
+        color: #000;
+    }
+}
+
+@keyframes text_reveal_name{
+    100%{
+        color: #3030a8d6;
+        font-weight: 500;
+    }
+}
+
+/* keyframes end */
+
+
+
+
+
+
+
+
+
+
+/* home section end*/
